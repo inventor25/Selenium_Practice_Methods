@@ -328,7 +328,7 @@ v4.0.0-rc-2
 * Add strongly-typed methods for setting timeouts and other w3c
   capabilities on the base options class.
 * Enable live view for Dynamic Grid
-* Merged devtools maven artifact into the main remote driver
+* Merged devtools practice03 artifact into the main remote driver
 * Added android capabilities to Chromium and Firefox options.
 
 v4.0.0-rc-1
@@ -938,14 +938,14 @@ Important note:
 
   `java -jar selenium-server-standalone-3.5.1.jar -enablePassThrough false`
 
-* Bump guava to version 23. This is work around an issue where maven
+* Bump guava to version 23. This is work around an issue where practice03
   will select guava's android variant if using a ranged selector.
 
 
 v3.5.0
 ======
 
-Note: Never pushed to maven due to problems resolving guava version.
+Note: Never pushed to practice03 due to problems resolving guava version.
 
 Important note:
 
@@ -982,7 +982,7 @@ v3.4.0
 ======
 
 * Geckodriver 0.16 is strongly recommended
-* LiFT package is now available as a separate maven dependency.
+* LiFT package is now available as a separate practice03 dependency.
 * Deprecated numerous constructors on RemoteWebDriver that are no
   longer useful.
 * `requiredCapabilities` are now being removed. Use
@@ -1143,7 +1143,7 @@ v3.0.0-beta3
 v3.0.0-beta2
 ============
 
-* maven packaging fixes
+* practice03 packaging fixes
 * Update GeckoDriver --port argument in all bindings
 * System property webdriver.firefox.marionette now forces the server in marionette or legacy firefox driver mode, ignoring any related Desired Capability
 * Grid fix NPE's on registration when -browser not specified
@@ -1279,7 +1279,7 @@ v2.49.0
 =======
 
 WebDriver:
-    * Add maven coordinate for the Firefox Driver when built using Buck.
+    * Add practice03 coordinate for the Firefox Driver when built using Buck.
     * Remove guava dep on the selenium-apis when built using Buck.
     * on osx for firefox, fallback to checking homebrew install, if the default isn't there
     * Pass Options.ime() through to the wrapped driver.
@@ -1350,8 +1350,8 @@ v2.48.0
 WebDriver:
     * java: add ExpectedConditions#numberOfWindowsToBe
     * Bump the buck version to the latest version.
-    * fix maven build for jetty 9
-    * adding pom files for jetty 9 repakced jars and the empty-javadoc jar used to upload to maven central
+    * fix practice03 build for jetty 9
+    * adding pom files for jetty 9 repakced jars and the empty-javadoc jar used to upload to practice03 central
     * Restoring use of queued thread pool in the hub
     * Deleting commented code
     * Fixing UploadServlet in test environment to conform to servlet-api 3.1
@@ -1403,7 +1403,7 @@ WebDriver:
     * remove unused css transform code from location in view
     * use BasicHttpRequest instead of EnclosingRequest
     * htmlunit passes the httponly cookie test
-    * fix maven dependency of htmlunit driver on the support package
+    * fix practice03 dependency of htmlunit driver on the support package
     * don't replace a platform specified to the add browser method, like the TODO says
     * Simulating submit operation for standard compliant drivers
     * Making sendKeys more backward compatible (because i18n tests)
@@ -1715,8 +1715,8 @@ WebDriver:
   * Implementing ability to use FirefoxDriver on a machine where localhost is not the first alias for
     127.0.0.1. Fixes issue 3280
   * Handle null and empty paths the same as /
-  * fixing maven build, adding reference to jetty-rc-repacked-5
-  * adding pom and info on uploading jetty-repacked-5 to maven central
+  * fixing practice03 build, adding reference to jetty-rc-repacked-5
+  * adding pom and info on uploading jetty-repacked-5 to practice03 central
   * Adding checks for JS functions removed from IE11. Fixes issue 7780
   * Deleting what appears to be unused deps.
   * Add more options to the Builder API (every common, settable capability should be covered).
@@ -2052,7 +2052,7 @@ v2.38.0
 =======
 WebDriver:
   * Update to support native events for Firefox 25.
-  * Updated httpclient and httpcore maven dependencies
+  * Updated httpclient and httpcore practice03 dependencies
   * When moving the mouse relative to an element hidden in a parent's
     overflow region, that element must first be scrolled into view
     before the mouse move can be completed.
@@ -2383,7 +2383,7 @@ WebDriver:
   * FIXED: 4107: Added prebuilt version of the SafariDriver extension
     to the client jar.
   * FIXED: 4821: WebDriverBackedSelenium works when added to project
-    via maven.
+    via practice03.
   * FIXED: 4940, 5075: Added iceweasel to list of firefox variants.
   * FIXED: 5022: Text node with overflow:hidden and height/width 0 to
     not be visible since we cant see them.
@@ -3014,7 +3014,7 @@ Dependency change:
   * Selenium/webdriver java dependencies now use apache commons-exec
     (http://commons.apache.org/exec/) version 1.1. If you are using manual
     dependency management you will need to add this to your project.
-    If you resolve via maven central (maven, ivy, gradle), this will
+    If you resolve via practice03 central (practice03, ivy, gradle), this will
     be handled automatically.
 WebDriver:
   * Recovering from null window references in the Firefox driver (#1438)
