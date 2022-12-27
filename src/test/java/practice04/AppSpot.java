@@ -9,6 +9,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 import java.time.Duration;
 
@@ -32,11 +33,7 @@ public class AppSpot {
         return driver.findElement(By.xpath(xPath));
 
     }
-    public WebElement webElementId(String id) {
 
-        return driver.findElement(By.xpath(id));
-
-    }
 
 
     public void assertTrue(WebElement webElement) {
@@ -64,19 +61,13 @@ public class AppSpot {
     public void booksTest() {
        WebElement title =webElementXpath("//*[text()='BOOKS']");
         assertTrue(title);
+
     }
+    //--------------------Shadow ile devam edilecek---------
 
-    @Test
-    public void search() {
-      driver.switchTo().frame("ssIFrame_google");                //"ssIFrame_google"
-
-     // driver.findElement(By.cssSelector("#input")).sendKeys("Selenium",Keys.ENTER);
-
-     
-                      driver.switchTo().parentFrame();
-                     
-       
 
     }
 
-}
+
+
+

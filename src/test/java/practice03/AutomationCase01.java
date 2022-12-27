@@ -13,11 +13,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
 import java.time.Duration;
-import java.util.List;
 
-public class BeforeAfter {
+public class AutomationCase01 {
 
     static WebDriver driver;
+    public void clickOutside() {
+        Actions action = new Actions(driver);
+        action.moveByOffset(0, 0).click().build().perform();
+    }
 
     public void setUps() {
 
@@ -61,7 +64,7 @@ public class BeforeAfter {
 
     @After
     public void tearDown() {
-        driver.close();
+     //   driver.close();
 
     }
 
@@ -89,6 +92,7 @@ public class BeforeAfter {
 
 
     //5. Verify 'New User Signup!' is visible
+
 
     @Test
     public void test04() {
@@ -271,22 +275,18 @@ public class BeforeAfter {
         //17. Click 'Delete Account' button
 
         webElementXpath("(//*[@style='color:brown;'])[2]").click();
-        // driver.switchTo().frame("//*[@name='ad_iframe']");
+
 
         //18. Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button
         clickOutside();
         WebElement userDelete = webElementXpath("//*[@style='margin-top: 100px !important;']");
-
 
         assertTrue(userDelete);
 
 
     }
 
-    public void clickOutside() {
-        Actions action = new Actions(driver);
-        action.moveByOffset(0, 0).click().build().perform();
-    }
+
 
 
 }
