@@ -10,12 +10,14 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 import java.time.Duration;
+import java.util.List;
 
 public class BeforeAfter {
 
-    WebDriver driver;
+    static WebDriver driver;
 
     public void setUps() {
 
@@ -31,9 +33,10 @@ public class BeforeAfter {
 
     public WebElement webElementXpath(String xPath) {
 
-      return driver.findElement(By.xpath(xPath));
+        return driver.findElement(By.xpath(xPath));
 
     }
+
     public WebElement webElementId(String id) {
 
         return driver.findElement(By.xpath(id));
@@ -42,7 +45,7 @@ public class BeforeAfter {
 
 
     public void assertTrue(WebElement webElement) {
-       Assert.assertTrue(webElement.isDisplayed());
+        Assert.assertTrue(webElement.isDisplayed());
 
     }
 
@@ -50,7 +53,7 @@ public class BeforeAfter {
     @Before
     public void setUp() {
 
-      setUps();
+        setUps();
 
         driver.get("http://automationexercise.com");
 
@@ -72,7 +75,7 @@ public class BeforeAfter {
 
         WebElement homPage = webElementXpath("//*[@class='fa fa-home']");
 
-       assertTrue(homPage);
+        assertTrue(homPage);
     }
 
 
@@ -81,7 +84,7 @@ public class BeforeAfter {
     @Test
     public void test03() {
 
-       webElementXpath("//*[@class='fa fa-lock']").click();
+        webElementXpath("//*[@class='fa fa-lock']").click();
     }
 
 
@@ -90,7 +93,7 @@ public class BeforeAfter {
     @Test
     public void test04() {
 
-       webElementXpath("//*[@class='fa fa-lock']").click();
+        webElementXpath("//*[@class='fa fa-lock']").click();
 
         WebElement newUser = webElementXpath("//*[@class='signup-form']");
 
@@ -102,7 +105,7 @@ public class BeforeAfter {
 
     @Test
     public void test05() {
-       webElementXpath("//*[@class='fa fa-lock']").click();
+        webElementXpath("//*[@class='fa fa-lock']").click();
 
         WebElement name1 = webElementXpath("(//*[@name='name'])[1]");
 
@@ -120,7 +123,7 @@ public class BeforeAfter {
     @Test
     public void test06() {
 
-      webElementXpath("//*[@class='fa fa-lock']").click();
+        webElementXpath("//*[@class='fa fa-lock']").click();
 
         WebElement name1 = webElementXpath("(//*[@name='name'])[1]");
 
@@ -140,7 +143,7 @@ public class BeforeAfter {
     @Test
     public void test07() {
 
-       webElementXpath("//*[@class='fa fa-lock']").click();
+        webElementXpath("//*[@class='fa fa-lock']").click();
 
         WebElement name1 = webElementXpath("(//*[@name='name'])[1]");
 
@@ -164,7 +167,7 @@ public class BeforeAfter {
     @Test
     public void test08() {
 
-       webElementXpath("//*[@class='fa fa-lock']").click();
+        webElementXpath("//*[@class='fa fa-lock']").click();
 
         WebElement name1 = webElementXpath("(//*[@name='name'])[1]");
 
@@ -178,7 +181,7 @@ public class BeforeAfter {
 
         signup.click();
 
-       webElementXpath("//*[@id='uniform-id_gender1']").click();
+        webElementXpath("//*[@id='uniform-id_gender1']").click();
 
         webElementXpath("(//*[@id='password'])[1]").sendKeys("1234f");
 
@@ -206,27 +209,27 @@ public class BeforeAfter {
 
         webElementXpath("//*[@id='first_name']").sendKeys("Ahmet", Keys.ENTER);
 
-       webElementXpath("//*[@id='last_name']").sendKeys("Kara", Keys.ENTER);
+        webElementXpath("//*[@id='last_name']").sendKeys("Kara", Keys.ENTER);
 
         webElementXpath("//*[@id='company']").sendKeys("QA", Keys.ENTER);
 
-       webElementXpath("//*[@id='address1']").sendKeys("Mehmet akif mh. 3430 , QA Company", Keys.ENTER);
+        webElementXpath("//*[@id='address1']").sendKeys("Mehmet akif mh. 3430 , QA Company", Keys.ENTER);
 
         webElementXpath("//*[@id='address2']").sendKeys("Barboros cd. No:45", Keys.ENTER);
 
         webElementXpath("//*[text()='Singapore']").click();
 
-       webElementXpath("//*[@id='state']").sendKeys("Bollywood", Keys.ENTER);
+        webElementXpath("//*[@id='state']").sendKeys("Bollywood", Keys.ENTER);
 
-       webElementXpath("//*[@id='city']").sendKeys("Mumbai", Keys.ENTER);
+        webElementXpath("//*[@id='city']").sendKeys("Mumbai", Keys.ENTER);
 
-       webElementXpath("//*[@id='zipcode']").sendKeys("3468", Keys.ENTER);
+        webElementXpath("//*[@id='zipcode']").sendKeys("3468", Keys.ENTER);
 
-       webElementXpath("//*[@id='mobile_number']").sendKeys("5435537");
+        webElementXpath("//*[@id='mobile_number']").sendKeys("5435537");
 
         //13. Click 'Create Account button'
 
-       webElementXpath("//*[text()='Create Account']").click();
+        webElementXpath("//*[text()='Create Account']").click();
 
 
         //13. Click 'Create Account button'
@@ -240,6 +243,8 @@ public class BeforeAfter {
         //15. Click 'Continue' button
 
         webElementXpath("//*[text()='Continue']").click();
+        //-- Açılan reklamı kapatmak için kullanılan method. Reklam çıkmıyorsa aşağıdaki  satırı yoruma alın
+        clickOutside();
 
 
         //17. Click 'Delete Account' button
@@ -253,9 +258,9 @@ public class BeforeAfter {
 
         //16. Verify that 'Logged in as username' is visible
 
-       webElementXpath("//*[@class='fa fa-lock']").click();
+        webElementXpath("//*[@class='fa fa-lock']").click();
 
-       webElementXpath("(//*[@placeholder='Email Address'])[1]").sendKeys("ahmet1@gmail.com", Keys.ENTER);
+        webElementXpath("(//*[@placeholder='Email Address'])[1]").sendKeys("ahmet1@gmail.com", Keys.ENTER);
 
         webElementXpath("//*[@data-qa='login-password']").sendKeys("1234f", Keys.ENTER);
 
@@ -266,14 +271,21 @@ public class BeforeAfter {
         //17. Click 'Delete Account' button
 
         webElementXpath("(//*[@style='color:brown;'])[2]").click();
+        // driver.switchTo().frame("//*[@name='ad_iframe']");
 
         //18. Verify that 'ACCOUNT DELETED!' is visible and click 'Continue' button
-
+        clickOutside();
         WebElement userDelete = webElementXpath("//*[@style='margin-top: 100px !important;']");
 
-        assertTrue(userDelete); //İframe sayfasından çıkılıp true testi yapılması lazım
+
+        assertTrue(userDelete);
 
 
+    }
+
+    public void clickOutside() {
+        Actions action = new Actions(driver);
+        action.moveByOffset(0, 0).click().build().perform();
     }
 
 
