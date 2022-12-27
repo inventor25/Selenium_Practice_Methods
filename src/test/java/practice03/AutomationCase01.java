@@ -64,7 +64,7 @@ public class AutomationCase01 {
 
     @After
     public void tearDown() {
-     //   driver.close();
+       driver.close();
 
     }
 
