@@ -36,7 +36,7 @@ public class DropDown01 {
 
     //Web elementin Xpath ile alımı methodu
 
-    public WebElement webElementXpath(String xPath) {
+    public WebElement xpathMethod(String xPath) {
 
         return driver.findElement(By.xpath(xPath));
 
@@ -71,7 +71,7 @@ public class DropDown01 {
 
     public void option01() {
 
-        WebElement number01 = webElementXpath("//*[@id='dropdown']");
+        WebElement number01 = xpathMethod("//*[@id='dropdown']");
         Select optiondropdown = new Select(number01);
         List<WebElement> optionList = optiondropdown.getOptions();
 
@@ -88,7 +88,7 @@ public class DropDown01 {
 
     public void option02() {
 
-        WebElement number01 = webElementXpath("//*[@id='dropdown']");
+        WebElement number01 = xpathMethod("//*[@id='dropdown']");
         Select optiondropdown = new Select(number01);
         List<WebElement> optionList = optiondropdown.getOptions();
 
@@ -106,7 +106,7 @@ public class DropDown01 {
 
     public void option03() {
 
-        WebElement number01 = webElementXpath("//*[@id='dropdown']");
+        WebElement number01 = xpathMethod("//*[@id='dropdown']");
         Select optiondropdown = new Select(number01);
         List<WebElement> optionList = optiondropdown.getOptions();
 
@@ -123,7 +123,7 @@ public class DropDown01 {
 
     public void option034() {
 
-        WebElement number01 = webElementXpath("//*[@id='dropdown']");
+        WebElement number01 = xpathMethod("//*[@id='dropdown']");
         Select optiondropdown = new Select(number01);
         List<WebElement> optionList = optiondropdown.getOptions();
 
@@ -154,7 +154,7 @@ public class DropDown01 {
 
     public void ogeTest() {
 
-        WebElement number01 = webElementXpath("//*[@id='dropdown']");
+        WebElement number01 = xpathMethod("//*[@id='dropdown']");//(web element xPath ile web element alımı)
         Select optiondropdown = new Select(number01);
         List<WebElement> optionList = optiondropdown.getOptions();
 
