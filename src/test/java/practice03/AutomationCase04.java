@@ -63,12 +63,12 @@ public class AutomationCase04 {
     @Test
     public void accountCreate() {
         webElementXpath("//*[@class='fa fa-lock']").click();
-        webElementXpath("//*[@data-qa='signup-name']").sendKeys("mehmet",
-                Keys.TAB, "kara1234@gmail.com",
+        webElementXpath("//*[@data-qa='signup-name']").sendKeys("kemal",
+                Keys.TAB, "kemal1234@gmail.com",
                 Keys.TAB, Keys.SPACE);
-        webElementXpath("//*[@value='Mr']").sendKeys("Mr", Keys.SPACE, Keys.TAB, "mehmet", Keys.TAB, "4321f", "4", Keys.SPACE,
+        webElementXpath("//*[@value='Mr']").sendKeys("Mr", Keys.SPACE, Keys.TAB, "kemal", Keys.TAB, "1234f", "4", Keys.SPACE,
                 Keys.TAB, "5", Keys.SPACE, Keys.TAB, Keys.SPACE, "4", Keys.SPACE, Keys.TAB,
-                Keys.SPACE, "2000", Keys.SPACE, Keys.ENTER, "ahmet", Keys.ENTER, "kara",
+                Keys.SPACE, "2000", Keys.SPACE, Keys.ENTER, "kemal", Keys.ENTER, "pala",
                 Keys.ENTER, "adnan mh", Keys.ENTER, "india",
                 Keys.ENTER, "Mumbai", Keys.ENTER, "1234", Keys.ENTER, "45665445", Keys.ENTER);
 
