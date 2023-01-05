@@ -117,7 +117,7 @@ public class AutomationCase01 {
 
         WebElement email1 = webElementXpath("(//*[@type='email'])[2]");
 
-        email1.sendKeys("ahmet1@gmail.com");
+        email1.sendKeys("ahmet12345@gmail.com");
 
     }
 
@@ -135,7 +135,7 @@ public class AutomationCase01 {
 
         WebElement email1 = webElementXpath("(//*[@type='email'])[2]");
 
-        email1.sendKeys("ahmet1@gmail.com");
+        email1.sendKeys("ahmet12345@gmail.com");
 
         WebElement signup = webElementXpath("(//*[@class='btn btn-default'])[2]");
 
@@ -155,7 +155,7 @@ public class AutomationCase01 {
 
         WebElement email1 = webElementXpath("(//*[@type='email'])[2]");
 
-        email1.sendKeys("ahmet1@gmail.com");
+        email1.sendKeys("ahmet12345@gmail.com");
 
         WebElement signup = webElementXpath("(//*[@class='btn btn-default'])[2]");
 
@@ -179,7 +179,7 @@ public class AutomationCase01 {
 
         WebElement email1 = webElementXpath("(//*[@type='email'])[2]");
 
-        email1.sendKeys("ahmet1@gmail.com");
+        email1.sendKeys("ahmet12345@gmail.com");
 
         WebElement signup = webElementXpath("(//*[@class='btn btn-default'])[2]");
 
@@ -264,7 +264,7 @@ public class AutomationCase01 {
 
         webElementXpath("//*[@class='fa fa-lock']").click();
 
-        webElementXpath("(//*[@placeholder='Email Address'])[1]").sendKeys("ahmet1@gmail.com", Keys.ENTER);
+        webElementXpath("(//*[@placeholder='Email Address'])[1]").sendKeys("ahmet12345@gmail.com", Keys.ENTER);
 
         webElementXpath("//*[@data-qa='login-password']").sendKeys("1234f", Keys.ENTER);
 
